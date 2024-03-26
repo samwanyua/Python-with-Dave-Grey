@@ -24,6 +24,13 @@ car_2 = Vehicle('BMW', 'x5')
 car_2.get_make_model()
 
 class Airplane(Vehicle):
+    def __init__(self,make, model, faa_id):
+        super().__init__(make,model)
+        self.faa_id = faa_id
+
+    def get_make_model(self):
+        print(f"I am {self.make} {self.model} {self.faa_id}")
+    
     def moves(self):
         print('Flies along..')
 
@@ -35,7 +42,7 @@ class Truck(Vehicle):
 class GolfCart(Vehicle):
     pass
 
-cessna = Airplane('Cessa', 'Skyhawk')
+cessna = Airplane('Cessa', 'Skyhawk', 'EER3422')
 mack = Truck('Mack', 'Pinnacle')
 golfwagon = GolfCart('Yamaha', 'GC100')
 
