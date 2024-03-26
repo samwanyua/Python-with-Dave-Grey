@@ -58,3 +58,12 @@ mack.moves()
 golfwagon.get_make_model()
 golfwagon.moves()
 
+print('\n\n\n')
+# polymorphism - ability to behave differently in response to the same input message
+for x in (my_car, car_2, cessna, mack, golfwagon):
+    x.get_make_model()
+    x.moves()
+
+
+
+    
